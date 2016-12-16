@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using PickupGameApp.ViewModel;
+using PickupGameApp.Views;
 
 namespace PickupGameApp
 {
@@ -22,7 +23,7 @@ namespace PickupGameApp
 		}
 		private static Page GetMainPage()
 		{
-			return new PickupGameAppPage();
+			return new MainPage();
 		}
 		protected override void OnStart()
 		{
