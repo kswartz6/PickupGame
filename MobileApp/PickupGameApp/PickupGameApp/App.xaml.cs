@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using PickupGameApp.ViewModel;
 
 namespace PickupGameApp
 {
@@ -8,9 +9,21 @@ namespace PickupGameApp
 		{
 			InitializeComponent();
 
-			MainPage = new PickupGameAppPage();
+			MainPage = GetMainPage();
 		}
-
+		private static ViewModelLocator _locator;
+ 
+        public static ViewModelLocator Locator
+        {
+            get
+            {
+                return _locator ?? (_locator = new ViewModelLocator());
+            }
+		}
+		private static Page GetMainPage()
+		{
+			return new PickupGameAppPage();
+		}
 		protected override void OnStart()
 		{
 			// Handle when your app starts

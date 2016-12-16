@@ -7,6 +7,8 @@ namespace PickupGameApp
 		public PickupGameAppPage()
 		{
 			InitializeComponent();
+
+			BindingContext = App.Locator.Main;
 		}
 	}
 }
